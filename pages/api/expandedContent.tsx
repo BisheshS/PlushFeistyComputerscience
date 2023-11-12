@@ -7,15 +7,12 @@ const ExpandedContent = () => {
       <div className={styles.expandedContent}>
         <p>
           <h3>what is this???? </h3>
-          Join a community that's already celebrated two successful batches, boasting a thriving user base of 25 individuals. Be a part of a proven program that brings positive change.
-          
+          Join a community that&apos;s already celebrated two successful batches, boasting a thriving user base of 25 individuals. Be a part of a proven program that brings positive change.
         </p>
 
         <p>
-
           1. Commit to 30 days without indulging in vices.<br></br>
-          2. Set and achieve daily goals: whether it's 100 pushups, writing a book, creating music, running 3 miles or whatever
-          <br></br>
+          2. Set and achieve daily goals: whether it&apos;s 100 pushups, writing a book, creating music, running 3 miles or whatever<br></br>
           3. Use social media for accountability
         </p>
         <br></br>
