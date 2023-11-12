@@ -1,0 +1,19 @@
+/* styles/Contact.module.css */
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
