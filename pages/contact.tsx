@@ -15,7 +15,7 @@ const Contact: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>Contact Us</h1>
         {/* Add your contact form or details here */}
-        <p>If you have any inquiries or feedback, feel free to reach out to us!</p>
+        <p>If you have any inquiries or feedback, feel free to reach out to us !</p>
         <br></br>
         <a href="mailto:bishesh@puchka.in">bishesh@puchka.in</a>
       </main>
