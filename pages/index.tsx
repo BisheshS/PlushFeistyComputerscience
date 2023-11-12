@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import ExpandedContent from '../pages/api/expandedContent.tsx'
+import ExpandedContent from '../pages/api/expandedContent'
 import Image from 'next/image'
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
