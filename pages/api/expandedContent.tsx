@@ -17,7 +17,7 @@ const ExpandedContent = () => {
         </p>
         <br></br>
         <p>
-          Take the first step towards a better version of yourself. <a href="https://novices-landing.vercel.app/">Join the Faatakameezz challenge now!</a>
+           <a href="https://novices-landing.vercel.app/">Join the Faatakameezz challenge now!</a>
         </p>
       </div>
     </div>
