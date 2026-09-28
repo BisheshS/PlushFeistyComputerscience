@@ -48,18 +48,14 @@ const Home: NextPage = () => {
             <p>WIP! creating a bunch of fun games to play in person during a gathering</p>
           </a>
 
-          <Link href="/flip">
-            <div className={styles.card}>
-              <h2>flip &rarr;</h2>
-              <p>Turn cravings into reps</p>
-            </div>
+          <Link href="/flip" className={styles.card}>
+            <h2>flip &rarr;</h2>
+            <p>Turn cravings into reps</p>
           </Link>
 
-          <Link href="/contact">
-            <div className={`${styles.card} ${styles.contactCard}`}>
-              <h2>Contact Us &rarr;</h2>
-              <p>Get in touch with us for any inquiries or feedback</p>
-            </div>
+          <Link href="/contact" className={`${styles.card} ${styles['contact-card']}`}>
+            <h2>Contact Us &rarr;</h2>
+            <p>Get in touch with us for any inquiries or feedback</p>
           </Link>
         </div>
       </main>
