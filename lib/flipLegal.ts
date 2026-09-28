@@ -115,7 +115,7 @@ export const flipTerms: LegalDoc = {
         "Flip Pro is available as a monthly or yearly subscription, or a one-time lifetime purchase. Prices are shown in the app before you buy.",
         "Payment is charged to your Apple Account when you confirm. Subscriptions renew automatically unless you cancel at least 24 hours before the end of the current period; renewal is charged within 24 hours before the period ends.",
         "If you start a free trial, you'll be charged when it ends unless you cancel before then. Any unused part of a trial is forfeited when you buy a subscription.",
-        "Manage or cancel any time in Settings › [your name] › Subscriptions. Refunds are handled by Apple under its policies.",
+        "Manage or cancel any time in Settings › Apple Account › Subscriptions. Refunds are handled by Apple under its policies.",
       ],
     },
     {
