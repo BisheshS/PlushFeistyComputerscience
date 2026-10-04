@@ -169,3 +169,89 @@
     font-size: 3rem;
   }
 }
+
+.tiers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.tier {
+  padding: 1.25rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+}
+
+.tierPro {
+  border-color: #0a0a0c;
+}
+
+.tier h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.tier ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.tier li {
+  margin-bottom: 0.3rem;
+}
+
+.plans {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+}
+
+.plan strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.plan span {
+  display: block;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.price {
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.price small {
+  display: block;
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.fine {
+  color: #555;
+  font-size: 0.9rem !important;
+}
+
+@media (min-width: 620px) {
+  .tiers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
