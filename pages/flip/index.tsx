@@ -10,11 +10,31 @@ const steps = [
   { title: 'Do it and watch the urge pass', text: 'Finish the reps and see how the urge fades.' },
 ]
 
+const freeFeatures = [
+  'One habit',
+  'The full Flip loop: rate the urge, get a card, do it',
+  '7 days of stats',
+  'The Trade share card',
+]
+
+const proFeatures = [
+  'More than one habit',
+  'Full history and every chart, plus the monthly Wrapped',
+  'All share cards',
+  'Widgets, Control Center and Live Activity',
+]
+
+const plans = [
+  { name: 'Yearly', price: '$29.99', per: 'per year', note: '7 days free, then $29.99 a year. Renews automatically until you cancel.' },
+  { name: 'Monthly', price: '$6.99', per: 'per month', note: 'Renews automatically until you cancel.' },
+  { name: 'Lifetime', price: '$59.99', per: 'one time', note: 'One payment. Not a subscription.' },
+]
+
 const FlipPage: NextPage = () => (
   <div className={styles.container}>
     <Head>
       <title>Flip | puchka</title>
-      <meta name="description" content="Flip turns cravings into reps. Feel an urge, tap Flip, do a quick exercise challenge and watch the urge pass. Support, privacy and terms." />
+      <meta name="description" content="Flip turns cravings into reps. Feel an urge, tap Flip, do a quick exercise challenge and watch the urge pass. Free, with optional Flip Pro. Pricing, support, privacy and terms." />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
@@ -40,6 +60,41 @@ const FlipPage: NextPage = () => (
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Pricing</h2>
+        <p>Flip is free to download. Flip Pro is optional. Prices are in US dollars and the app is available in the United States.</p>
+        <div className={styles.tiers}>
+          <div className={styles.tier}>
+            <h3>Free</h3>
+            <ul>
+              {freeFeatures.map((f) => <li key={f}>{f}</li>)}
+            </ul>
+          </div>
+          <div className={`${styles.tier} ${styles.tierPro}`}>
+            <h3>Flip Pro</h3>
+            <ul>
+              {proFeatures.map((f) => <li key={f}>{f}</li>)}
+            </ul>
+          </div>
+        </div>
+        <ul className={styles.plans}>
+          {plans.map((pl) => (
+            <li className={styles.plan} key={pl.name}>
+              <div>
+                <strong>{pl.name}</strong>
+                <span>{pl.note}</span>
+              </div>
+              <div className={styles.price}>{pl.price}<small>{pl.per}</small></div>
+            </li>
+          ))}
+        </ul>
+        <p className={styles.fine}>
+          Payment is charged to your Apple Account. A subscription renews automatically unless you cancel at
+          least 24 hours before the end of the current period. Manage or cancel it in Settings &rsaquo; Apple
+          Account &rsaquo; Subscriptions. See the <Link className={styles.link} href="/flip/terms">Terms of Use</Link>.
+        </p>
       </section>
 
       <section className={styles.section}>
