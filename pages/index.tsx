@@ -53,7 +53,7 @@ const Home: NextPage = () => {
             <p>Turn cravings into reps</p>
           </Link>
 
-          <Link href="/contact" className={`${styles.card} ${styles['contact-card']}`}>
+          <Link href="/contact" className={styles.card}>
             <h2>Contact Us &rarr;</h2>
             <p>Get in touch with us for any inquiries or feedback</p>
           </Link>
