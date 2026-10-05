@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <title>puchka</title>
         <meta
           name="description"
-          content="puchka is a small studio making playful products: no vices, pakoda and Flip, the app that turns cravings into reps."
+          content="puchka is a small studio making playful products: no vices and Flip, the app that turns cravings into reps."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -91,22 +91,8 @@ const Home: NextPage = () => {
           </li>
 
           <li className="enter" style={delay(760)}>
-            <div className={styles.card} data-glow>
-              <div className={styles.cardHead}>
-                <span className={styles.index}>02</span>
-                <div className={styles.cardBody}>
-                  <h2>
-                    pakoda <span className={styles.tag}>in progress</span>
-                  </h2>
-                  <p>WIP! creating a bunch of fun games to play in person during a gathering</p>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li className="enter" style={delay(840)}>
             <Link href="/flip" className={styles.card} data-glow>
-              <span className={styles.index}>03</span>
+              <span className={styles.index}>02</span>
               <div className={styles.cardBody}>
                 <h2>flip</h2>
                 <p>Turn cravings into reps</p>
@@ -115,9 +101,9 @@ const Home: NextPage = () => {
             </Link>
           </li>
 
-          <li className="enter" style={delay(920)}>
+          <li className="enter" style={delay(840)}>
             <Link href="/contact" className={styles.card} data-glow>
-              <span className={styles.index}>04</span>
+              <span className={styles.index}>03</span>
               <div className={styles.cardBody}>
                 <h2>Contact Us</h2>
                 <p>Get in touch with us for any inquiries or feedback</p>
