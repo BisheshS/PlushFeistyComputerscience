@@ -74,8 +74,18 @@ const FlipPage: NextPage = () => (
       </section>
 
       <section className={styles.section}>
+        <h2 data-reveal>A look inside</h2>
+        <div className={styles.shots} data-reveal>
+          {[1, 2, 3, 4, 5, 6, 7].map((n) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img key={n} src={`/flip/0${n}.jpg`} alt={`Flip app screenshot ${n}`} width={380} height={822} loading="lazy" />
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
         <h2 data-reveal>Pricing</h2>
-        <p data-reveal>Flip is free to download. Flip Pro is optional. The prices below are US prices. The App Store shows the price in your local currency.</p>
+        <p data-reveal>Flip is free to download. After setup, the app offers Flip Pro with a 7-day free trial. The prices below are US prices. The App Store shows the price in your local currency.</p>
         <div className={styles.tiers}>
           <div className={styles.tier} data-reveal data-glow style={order(0)}>
             <h3>Free</h3>
