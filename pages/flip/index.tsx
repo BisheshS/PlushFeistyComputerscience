@@ -64,7 +64,7 @@ const FlipPage: NextPage = () => (
 
       <section className={styles.section}>
         <h2>Pricing</h2>
-        <p>Flip is free to download. Flip Pro is optional. Prices are in US dollars and the app is available in the United States.</p>
+        <p>Flip is free to download. Flip Pro is optional. The prices below are US prices. The App Store shows the price in your local currency.</p>
         <div className={styles.tiers}>
           <div className={styles.tier}>
             <h3>Free</h3>
