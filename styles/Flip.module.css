@@ -490,9 +490,6 @@
     padding: 0 2rem;
   }
 
-  .tiers {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

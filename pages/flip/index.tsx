@@ -15,13 +15,6 @@ const steps = [
   { title: 'Do it and watch the urge pass', text: 'Finish the reps and see how the urge fades.' },
 ]
 
-const freeFeatures = [
-  'One habit',
-  'The full Flip loop: rate the urge, get a card, do it',
-  '7 days of stats',
-  'The Trade share card',
-]
-
 const proFeatures = [
   'More than one habit',
   'Full history and every chart, plus the monthly Wrapped',
@@ -39,7 +32,7 @@ const FlipPage: NextPage = () => (
   <div className={styles.container}>
     <Head>
       <title>Flip | puchka</title>
-      <meta name="description" content="Flip turns cravings into reps. Feel an urge, tap Flip, do a quick exercise challenge and watch the urge pass. Free, with optional Flip Pro. Pricing, support, privacy and terms." />
+      <meta name="description" content="Flip turns cravings into reps. Feel an urge, tap Flip, do a quick exercise challenge and watch the urge pass. Free to download, with a 7-day free trial of Flip Pro. Pricing, support, privacy and terms." />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
@@ -87,13 +80,7 @@ const FlipPage: NextPage = () => (
         <h2 data-reveal>Pricing</h2>
         <p data-reveal>Flip is free to download. After setup, the app offers Flip Pro with a 7-day free trial. The prices below are US prices. The App Store shows the price in your local currency.</p>
         <div className={styles.tiers}>
-          <div className={styles.tier} data-reveal data-glow style={order(0)}>
-            <h3>Free</h3>
-            <ul>
-              {freeFeatures.map((f) => <li key={f}>{f}</li>)}
-            </ul>
-          </div>
-          <div className={`${styles.tier} ${styles.tierPro}`} data-reveal data-glow style={order(1)}>
+          <div className={`${styles.tier} ${styles.tierPro}`} data-reveal data-glow style={order(0)}>
             <h3>Flip Pro</h3>
             <ul>
               {proFeatures.map((f) => <li key={f}>{f}</li>)}
