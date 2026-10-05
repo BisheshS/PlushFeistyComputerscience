@@ -1,29 +1,43 @@
 // pages/contact.tsx
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link'; // Import the Link component
+import Link from 'next/link';
+import type { CSSProperties } from 'react';
+import SiteFooter from '../components/SiteFooter';
 import styles from '../styles/Contact.module.css';
+
+const delay = (ms: number) => ({ '--d': `${ms}ms` } as CSSProperties);
 
 const Contact: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Contact Us</title>
+        <title>Contact Us | puchka</title>
         <meta name="description" content="Contact us for any inquiries or feedback." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Contact Us</h1>
-        {/* Add your contact form or details here */}
-        <p>If you have any inquiries or feedback, feel free to reach out to us !</p>
-        <br></br>
-        <a href="mailto:bishesh@puchka.in">bishesh@puchka.in</a>
+        <Link href="/" className={`${styles.back} enter`} style={delay(0)}>
+          <span aria-hidden="true">&larr;</span> puchka
+        </Link>
+
+        <h1 className={`${styles.title} enter`} style={delay(80)}>Contact Us</h1>
+        <p className={`${styles.lede} enter`} style={delay(180)}>
+          If you have any inquiries or feedback, feel free to reach out to us !
+        </p>
+
+        <a className={`${styles.email} enter`} style={delay(280)} href="mailto:bishesh@puchka.in">
+          <span className={styles.emailText}>bishesh@puchka.in</span>
+          <span className={styles.emailArrow} aria-hidden="true">&rarr;</span>
+        </a>
+
+        <p className={`${styles.home} enter`} style={delay(380)}>
+          <Link href="/" className="u-link">Go back to Home</Link>
+        </p>
       </main>
 
-      {/* Add a link back to the home page */}
-      <Link href="/">
-        <h2>Go back to Home</h2>
-      </Link>
+      <SiteFooter />
     </div>
   );
 };

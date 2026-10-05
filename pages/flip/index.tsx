@@ -1,8 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import type { CSSProperties } from 'react'
 import styles from '../../styles/Flip.module.css'
+import SiteFooter from '../../components/SiteFooter'
 import { FLIP_SUPPORT_EMAIL } from '../../lib/flip'
+
+const delay = (ms: number) => ({ '--d': `${ms}ms` } as CSSProperties)
+const order = (i: number) => ({ '--i': i } as CSSProperties)
 
 const steps = [
   { title: 'Feel an urge', text: 'A craving hits. Open Flip instead of giving in.' },
@@ -39,19 +44,25 @@ const FlipPage: NextPage = () => (
     </Head>
 
     <main className={styles.main}>
-      <Link href="/" className={styles.back}>&larr; puchka</Link>
+      <Link href="/" className={`${styles.back} enter`} style={delay(0)}>
+        <span aria-hidden="true">&larr;</span> puchka
+      </Link>
 
       <section className={styles.hero}>
-        <h1 className={styles.title}>Flip</h1>
-        <p className={styles.tagline}>Turn cravings into reps.</p>
-        <span className={styles.soon}>Coming soon to the App Store</span>
+        <div className={styles.heroGlow} aria-hidden="true" />
+        <h1 className={`${styles.title} enter`} style={delay(80)}>Flip</h1>
+        <p className={`${styles.tagline} enter`} style={delay(200)}>Turn cravings into reps.</p>
+        <span className={`${styles.soon} enter`} style={delay(320)}>
+          <span className={styles.dot} aria-hidden="true" />
+          Coming soon to the App Store
+        </span>
       </section>
 
       <section className={styles.section}>
-        <h2>How it works</h2>
+        <h2 data-reveal>How it works</h2>
         <ol className={styles.steps}>
           {steps.map((s, i) => (
-            <li className={styles.step} key={s.title}>
+            <li className={styles.step} key={s.title} data-reveal data-glow style={order(i + 1)}>
               <div className={styles.num}>{i + 1}</div>
               <div>
                 <strong>{s.title}</strong>
@@ -63,16 +74,16 @@ const FlipPage: NextPage = () => (
       </section>
 
       <section className={styles.section}>
-        <h2>Pricing</h2>
-        <p>Flip is free to download. Flip Pro is optional. The prices below are US prices. The App Store shows the price in your local currency.</p>
+        <h2 data-reveal>Pricing</h2>
+        <p data-reveal>Flip is free to download. Flip Pro is optional. The prices below are US prices. The App Store shows the price in your local currency.</p>
         <div className={styles.tiers}>
-          <div className={styles.tier}>
+          <div className={styles.tier} data-reveal data-glow style={order(0)}>
             <h3>Free</h3>
             <ul>
               {freeFeatures.map((f) => <li key={f}>{f}</li>)}
             </ul>
           </div>
-          <div className={`${styles.tier} ${styles.tierPro}`}>
+          <div className={`${styles.tier} ${styles.tierPro}`} data-reveal data-glow style={order(1)}>
             <h3>Flip Pro</h3>
             <ul>
               {proFeatures.map((f) => <li key={f}>{f}</li>)}
@@ -80,8 +91,14 @@ const FlipPage: NextPage = () => (
           </div>
         </div>
         <ul className={styles.plans}>
-          {plans.map((pl) => (
-            <li className={styles.plan} key={pl.name}>
+          {plans.map((pl, i) => (
+            <li
+              className={`${styles.plan} ${i === 0 ? styles.planFeatured : ''}`}
+              key={pl.name}
+              data-reveal
+              data-glow
+              style={order(i)}
+            >
               <div>
                 <strong>{pl.name}</strong>
                 <span>{pl.note}</span>
@@ -90,16 +107,16 @@ const FlipPage: NextPage = () => (
             </li>
           ))}
         </ul>
-        <p className={styles.fine}>
+        <p className={styles.fine} data-reveal>
           Payment is charged to your Apple Account. A subscription renews automatically unless you cancel at
           least 24 hours before the end of the current period. Manage or cancel it in Settings &rsaquo; Apple
-          Account &rsaquo; Subscriptions. See the <Link className={styles.link} href="/flip/terms">Terms of Use</Link>.
+          Account &rsaquo; Subscriptions. See the <Link className={`${styles.link} u-link`} href="/flip/terms">Terms of Use</Link>.
         </p>
       </section>
 
       <section className={styles.section}>
-        <h2>Your data stays on your iPhone</h2>
-        <div className={styles.note}>
+        <h2 data-reveal>Your data stays on your iPhone</h2>
+        <div className={styles.note} data-reveal>
           <p>
             No accounts, no servers, no analytics. Everything Flip knows lives on your
             phone, and you can export or delete it anytime from the app.
@@ -108,10 +125,10 @@ const FlipPage: NextPage = () => (
       </section>
 
       <section className={styles.section}>
-        <h2>Support</h2>
+        <h2 data-reveal>Support</h2>
         <p>
           Questions or feedback? Email{' '}
-          <a className={styles.link} href={`mailto:${FLIP_SUPPORT_EMAIL}`}>{FLIP_SUPPORT_EMAIL}</a>.
+          <a className={`${styles.link} u-link`} href={`mailto:${FLIP_SUPPORT_EMAIL}`}>{FLIP_SUPPORT_EMAIL}</a>.
         </p>
         <p>
           <strong>Manage or cancel a subscription:</strong> Settings &rsaquo; Apple Account &rsaquo; Subscriptions.
@@ -121,17 +138,15 @@ const FlipPage: NextPage = () => (
         </p>
       </section>
 
-      <section className={styles.section}>
+      <section className={styles.section} data-reveal>
         <div className={styles.linkRow}>
-          <Link className={styles.link} href="/flip/privacy">Privacy Policy</Link>
-          <Link className={styles.link} href="/flip/terms">Terms of Use</Link>
+          <Link className={styles.pillLink} href="/flip/privacy">Privacy Policy <span aria-hidden="true">&rarr;</span></Link>
+          <Link className={styles.pillLink} href="/flip/terms">Terms of Use <span aria-hidden="true">&rarr;</span></Link>
         </div>
       </section>
     </main>
 
-    <footer className={styles.footer}>
-      <p>Made with ❤️ in India</p>
-    </footer>
+    <SiteFooter flip />
   </div>
 )
 
