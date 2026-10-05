@@ -1,54 +1,77 @@
-/* styles/ExpandedContent.module.css */
-.expandedContentWrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+/* The "no vices" details, shown inside its card when the card expands. */
+.expandedContent {
+  padding: 0.25rem 0 0.25rem;
+  color: var(--fg-2);
+  line-height: 1.65;
 }
 
-.expandedContent {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  width: 90%;
-  max-width: 600px; /* Adjust max-width for better responsiveness */
-  overflow: auto;
-  text-align: left;
-  line-height: 1.6;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  margin: auto; /* Center the content */
+.expandedContent h3 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: var(--step-2);
+  color: var(--fg);
+  font-style: italic;
 }
 
 .expandedContent p {
-  margin-bottom: 15px;
+  margin: 0 0 1rem;
 }
 
-.expandedContent a {
-  text-decoration: none;
-  font-weight: bold;
+.rules {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: rule;
+  border-top: 1px solid var(--line);
 }
 
-.expandedContent a:hover {
-  text-decoration: underline;
+.rules li {
+  counter-increment: rule;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.5rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.expandedContentWrapper.show {
-  opacity: 1;
-  visibility: visible;
+.rules li::before {
+  content: counter(rule, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--muted);
 }
 
-.expandedContentWrapper.show .expandedContent {
-  opacity: 1;
-  transform: scale(1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.65rem 1.15rem;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.005em;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+
+.cta span {
+  transition: transform 0.35s var(--ease-out);
+}
+
+.cta:hover span {
+  transform: translateX(3px);
+}
+
+.cta:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) {
+  .cta:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lift);
+  }
 }
