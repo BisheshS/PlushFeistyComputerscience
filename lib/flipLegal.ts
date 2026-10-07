@@ -38,6 +38,7 @@ export const flipPrivacy: LegalDoc = {
       heading: "PERMISSIONS FLIP MAY ASK FOR",
       body: [
         "Notifications — to remind you before your danger zone. Reminders are scheduled on your iPhone; nothing is sent from a server.",
+        "If you start a free trial of Flip Pro, Flip may also send one reminder 2 days before the trial ends. It is scheduled on your iPhone and no data leaves your phone.",
         "Motion & Fitness — to count steps during walking challenges. Step counts are read on your device and only the total for that challenge is saved.",
         "Photos (add only) — to save a share card when you tap Save. Flip can't see your photo library.",
         "You can change any of these in the Settings app at any time.",
