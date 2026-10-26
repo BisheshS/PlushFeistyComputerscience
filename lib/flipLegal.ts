@@ -11,19 +11,19 @@ export type LegalDoc = {
 
 export const flipPrivacy: LegalDoc = {
   title: "Privacy Policy",
-  lastUpdated: "Last updated: 28 September 2026",
+  lastUpdated: "Last updated: 9 October 2026",
   intro: "Flip is built so your urges never leave your phone. We don't run servers, we don't have accounts, and we don't collect your data. Here's exactly what that means.",
   sections: [
     {
       heading: "WHAT WE COLLECT",
       body: [
-        "Nothing. Flip has no sign-up, no analytics, no advertising, no tracking and no third-party code. The app makes no network requests of its own.",
+        "Almost nothing. Flip has no sign-up, no analytics, no advertising and no tracking. The one exception is purchases. When you open Flip, the app contacts RevenueCat, a service that confirms subscriptions, to sync your purchase status. It sends a random, anonymous app user ID, your device identifier for vendors (IDFV) and your purchase history. It does not get your name, email or Apple ID. This data is not used for ads or tracking. We use it to see how many people subscribe. Nothing about your urges, habits or stats is sent.",
       ],
     },
     {
       heading: "WHAT'S STORED ON YOUR IPHONE",
       body: [
-        "To work, Flip saves the following on this device only: the habits you add and their cost, daily count and time settings; each urge you log (when it started, how strong it felt before and after, what set it off, which card you did, reps or time completed, and the outcome); your answers from setup (fitness level, where you usually are, goals, danger-zone times and triggers); your missions, XP and streak settings.",
+        "To work, Flip saves the following on this device only: the habits you add and their cost, daily count and time settings; each urge you log (when it started, how strong it felt before and after, what set it off, which card you did, reps or time completed, and the outcome); your answers from setup (fitness level, where you usually are, goals, danger-zone times, triggers and how strong your urges usually are); your missions, XP and streak settings.",
         "This data sits in Flip's private storage on your iPhone. Flip's widgets read the same storage so they can show your stats. Nobody else, including us, can see it.",
         "If you back up your iPhone to iCloud or a computer, Apple includes app data like this in that backup, under your control and Apple's backup terms.",
       ],
@@ -32,6 +32,7 @@ export const flipPrivacy: LegalDoc = {
       heading: "PURCHASES",
       body: [
         "Flip Pro is bought through Apple. Apple handles your payment details; we never see them. The app only receives a yes/no confirmation from Apple that your purchase is active, and checks it on your device.",
+        "Purchase status checks go through RevenueCat (revenuecat.com). Their privacy policy covers that service.",
       ],
     },
     {
