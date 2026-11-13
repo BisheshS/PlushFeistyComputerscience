@@ -14,7 +14,7 @@ const Page: NextPage = () => (
   <div className={styles.container}>
     <Head>
       <title>{`${doc.title} | Replenish | puchka`}</title>
-      <meta name="description" content="Replenish Privacy Policy: no accounts, no servers, no analytics. Your smoking data stays on your iPhone." />
+      <meta name="description" content="Replenish Privacy Policy: no accounts, no ads. Your smoking and Health data stay on your iPhone. Optional anonymous usage stats, easy to switch off." />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 

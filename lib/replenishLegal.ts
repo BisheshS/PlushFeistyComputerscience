@@ -6,13 +6,37 @@ import { REPLENISH_SUPPORT_EMAIL } from './replenish'
 
 export const replenishPrivacy: LegalDoc = {
   title: "Privacy Policy",
-  lastUpdated: "Last updated: 9 October 2026",
-  intro: "Replenish keeps your smoking data on your iPhone. We run no servers, we have no accounts, and we collect nothing. This page says exactly what that means.",
+  lastUpdated: "Last updated: 13 November 2026",
+  intro: "Your smoking data and your Health data stay on your iPhone. We run no servers of our own and there are no accounts. Replenish uses two outside services for anonymous numbers only: RevenueCat for purchases and TelemetryDeck for usage counts. This page says exactly what each one gets, and how to switch it off.",
   sections: [
     {
       heading: "WHAT WE COLLECT",
       body: [
-        "Nothing. Replenish has no sign-up, no analytics, no advertising, no tracking and no third-party code. The app makes no network requests of its own. The 3D chest runs from files inside the app.",
+        "Nothing that identifies you. There is no sign-up, no name, no email, no advertising and no tracking across other apps or websites. Replenish does not use the advertising identifier and does not ask to track you.",
+        "Two things leave your iPhone, and both are anonymous: usage events (sent to TelemetryDeck) and purchase information (sent to RevenueCat). The next two sections list them in full.",
+      ],
+    },
+    {
+      heading: "ANONYMOUS USAGE EVENTS (TELEMETRYDECK)",
+      body: [
+        "TelemetryDeck is a privacy-focused analytics service. It helps us see where people stop in setup, whether the screens work, and which features get used, so we can fix problems.",
+        "Each event is a short name and, at most, one fixed label. Examples: setup step viewed (the step name only), paywall shown (which button opened it), plan selected (yearly, monthly or lifetime), purchase succeeded or cancelled, restore tapped, a feature was used (logging a smoke, One more, SOS, Journey, a look change, a source opened), and problems (prices did not load, the 3D chest did not load, an error code).",
+        "Events never include how many cigarettes you smoked, when, your quit date, your plan, your answers in setup, your heart rate or any Health data, your pack price or any money figure, or anything you type.",
+        "Along with each event, TelemetryDeck receives the usual technical details: app version, iPhone model, iOS version, language, region, time zone, screen size, the time of the event, and a random ID made by scrambling an Apple identifier for this app on this iPhone (a salted hash, so it cannot be turned back into the original). The ID is not your name, your Apple Account or your advertising ID. It cannot be used to find you. As with any internet connection, TelemetryDeck's servers also see the connection itself, which includes the IP address. The app does not add the IP address to any event.",
+      ],
+    },
+    {
+      heading: "PURCHASES (APPLE AND REVENUECAT)",
+      body: [
+        "Replenish Pro is bought through Apple. Apple handles your payment details and we never see them. The app checks on your iPhone that your purchase is active.",
+        "We use RevenueCat to see purchases and revenue. When you buy or restore Pro, the app tells RevenueCat about that purchase: the product, the price, the dates and Apple's purchase receipt. RevenueCat gives you a random anonymous ID. It receives no name, no email and no Health or smoking data. As with any internet connection, RevenueCat also sees your IP address, which it uses for things like your country.",
+      ],
+    },
+    {
+      heading: "TURN IT OFF",
+      body: [
+        "In You > Privacy, switch off Share anonymous usage. Replenish then sends no usage events. It also stops telling RevenueCat about your purchases and does not start RevenueCat the next time you open the app. If RevenueCat was already running in this session, it stops when you close and reopen the app.",
+        "Your purchases still work with the switch off, because the app checks them with Apple on your iPhone. The switch is on by default and the choice stays on your iPhone.",
       ],
     },
     {
@@ -27,19 +51,13 @@ export const replenishPrivacy: LegalDoc = {
       heading: "APPLE HEALTH",
       body: [
         "Apple Health is optional and read-only. If you allow it, Replenish reads your resting heart rate, heart rate variability and heart rate. It shows your own numbers before and after your quit date, and it sets the resting speed of the 3D heart.",
-        "Replenish never writes to Apple Health. Health data is not sent anywhere, not used for advertising and not shared. You can turn it off in You, which also clears the cache. To remove access fully, use Settings > Health > Data Access.",
+        "Replenish never writes to Apple Health. Health data never leaves your iPhone: it is not sent to us, to TelemetryDeck, to RevenueCat or to anyone else, it is not used for advertising and it is not shared. You can turn it off in You, which also clears the cache. To remove access fully, use Settings > Health > Data Access.",
       ],
     },
     {
       heading: "WIDGETS AND LIVE ACTIVITY",
       body: [
         "Widgets and the Live Activity are drawn by small parts of the app. To work, they read a summary the app saves in a storage area shared only with Replenish on your iPhone: your recent smoke times, your wake and bed times, your quit date and your resting heart rate. Nothing leaves your phone.",
-      ],
-    },
-    {
-      heading: "PURCHASES",
-      body: [
-        "Replenish Pro is bought through Apple. Apple handles your payment details and we never see them. The app only receives a confirmation from Apple that your purchase is active, and checks it on your device.",
       ],
     },
     {
@@ -65,7 +83,8 @@ export const replenishPrivacy: LegalDoc = {
     {
       heading: "YOUR CONTROL",
       body: [
-        "Delete: You > Delete all data erases everything Replenish has stored on this iPhone. Deleting the app does the same.",
+        "Switch off: You > Privacy > Share anonymous usage.",
+        `Delete: You > Delete all data erases everything Replenish has stored on this iPhone. Deleting the app does the same. The anonymous usage and purchase records that were already sent carry no name or email. To ask us to delete them, email ${REPLENISH_SUPPORT_EMAIL} and tell us when you installed the app.`,
       ],
     },
     {

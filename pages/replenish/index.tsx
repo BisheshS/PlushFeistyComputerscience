@@ -28,7 +28,7 @@ const ReplenishPage: NextPage = () => (
   <div className={styles.container}>
     <Head>
       <title>Replenish | puchka</title>
-      <meta name="description" content="Replenish: see your lungs recover. Log a cigarette and watch a 3D chest react, then watch it heal when you quit. Everything stays on your iPhone. Support, privacy and terms." />
+      <meta name="description" content="Replenish: see your lungs recover. Log a cigarette and watch a 3D chest react, then watch it heal when you quit. Your smoking and Health data stay on your iPhone. Support, privacy and terms." />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
@@ -77,10 +77,10 @@ const ReplenishPage: NextPage = () => (
       </section>
 
       <section className={styles.section}>
-        <h2 data-reveal>Your data stays on your iPhone</h2>
+        <h2 data-reveal>Your smoking data stays on your iPhone</h2>
         <div className={styles.note} data-reveal>
           <p>
-            No account, no ads, no tracking, no servers. Apple Health is optional and read-only.
+            No account and no ads. Your smoking and Health data never leave your iPhone. The app sends only anonymous purchase and usage numbers, and you can switch that off in the app. Apple Health is optional and read-only.
             You can delete everything from the app at any time.
           </p>
         </div>
