@@ -45,10 +45,16 @@ const FlipPage: NextPage = () => (
         <div className={styles.heroGlow} aria-hidden="true" />
         <h1 className={`${styles.title} enter`} style={delay(80)}>Flip</h1>
         <p className={`${styles.tagline} enter`} style={delay(200)}>Turn cravings into reps.</p>
-        <span className={`${styles.soon} enter`} style={delay(320)}>
+        <a
+          className={`${styles.soon} ${styles.storeLink} enter`}
+          style={delay(320)}
+          href="https://apps.apple.com/app/id6817090864"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span className={styles.dot} aria-hidden="true" />
-          Coming soon to the App Store
-        </span>
+          Download on the App Store
+        </a>
       </section>
 
       <section className={styles.section}>

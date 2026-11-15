@@ -101,6 +101,16 @@
   box-shadow: var(--shadow);
 }
 
+.storeLink {
+  text-decoration: none;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.storeLink:hover,
+.storeLink:focus-visible {
+  transform: translateY(-1px);
+}
+
 .dot {
   position: relative;
   width: 0.5rem;
