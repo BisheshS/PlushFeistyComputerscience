@@ -23,6 +23,7 @@ const SiteFooter = ({ flip = false }: Props) => (
         ) : (
           <>
             <Link className="u-link" href="/flip">Flip</Link>
+            <a className="u-link" href="https://fleetapp.in/">Fleet</a>
             <Link className="u-link" href="/contact">Contact</Link>
           </>
         )}
