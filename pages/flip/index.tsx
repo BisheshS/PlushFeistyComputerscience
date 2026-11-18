@@ -125,7 +125,6 @@ const FlipPage: NextPage = () => {
         <title>Flip | puchka</title>
         <meta name="description" content="Flip turns cravings into reps. Feel an urge, tap Flip, do a quick exercise challenge and watch the urge pass. Free to download, with a 7-day free trial of Flip Pro. Pricing, support, privacy and terms." />
         <meta name="theme-color" content="#0a0a0c" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <nav className={styles.nav} aria-label="Flip">

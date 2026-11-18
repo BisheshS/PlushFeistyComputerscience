@@ -166,7 +166,15 @@ const Home: NextPage = () => {
           name="description"
           content="puchka builds experiences. AI research, agentic engineering, and apps that make life better: Flip, Fleet and no vices."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="puchka" />
+        <meta property="og:description" content="We build experiences. AI research, agentic engineering, and apps that make life better." />
+        <meta property="og:url" content="https://puchka.in/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://puchka.in/og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://puchka.in/og.png" />
       </Head>
 
       <ParticleField />
@@ -174,7 +182,8 @@ const Home: NextPage = () => {
       <header className={styles.navWrap} data-dark="true">
         <nav className={styles.nav} aria-label="Main">
           <Link href="/" className={styles.logo} aria-label="puchka home">
-            <span className={styles.logoBall} aria-hidden="true" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className={styles.logoMark} src="/logo.svg" alt="" width={26} height={26} />
             puchka
           </Link>
           <div className={styles.seg} ref={seg} data-has={active !== ''}>

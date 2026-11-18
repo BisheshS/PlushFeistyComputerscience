@@ -40,7 +40,6 @@ const BigPage = ({ title, description, noindex, kicker, headline, lede, cta }: P
         <title>{title}</title>
         {description && <meta name="description" content={description} />}
         {noindex && <meta name="robots" content="noindex" />}
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <ParticleField />

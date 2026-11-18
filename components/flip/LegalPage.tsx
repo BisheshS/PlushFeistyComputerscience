@@ -31,7 +31,6 @@ const LegalPage = ({ doc, description }: { doc: LegalDoc; description: string })
         <title>{`${doc.title} | Flip | puchka`}</title>
         <meta name="description" content={description} />
         <meta name="theme-color" content="#0a0a0c" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <span className={styles.readBar} data-readbar aria-hidden="true" />
