@@ -4,9 +4,11 @@ import styles from '../styles/SiteFooter.module.css'
 type Props = {
   /** Show the Flip legal links (Flip pages only). */
   flip?: boolean
+  /** Show the Replenish legal links (Replenish pages only). */
+  replenish?: boolean
 }
 
-const SiteFooter = ({ flip = false }: Props) => (
+const SiteFooter = ({ flip = false, replenish = false }: Props) => (
   <footer className={styles.footer}>
     <div className={styles.inner}>
       <p className={styles.mark}>
@@ -15,7 +17,12 @@ const SiteFooter = ({ flip = false }: Props) => (
         <Link href="/" className="u-link">puchka</Link>
       </p>
       <nav className={styles.links} aria-label="Footer">
-        {flip ? (
+        {replenish ? (
+          <>
+            <Link className="u-link" href="/replenish/privacy">Privacy Policy</Link>
+            <Link className="u-link" href="/replenish/terms">Terms of Use</Link>
+          </>
+        ) : flip ? (
           <>
             <Link className="u-link" href="/flip/privacy">Privacy Policy</Link>
             <Link className="u-link" href="/flip/terms">Terms of Use</Link>
