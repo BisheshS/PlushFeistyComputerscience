@@ -80,12 +80,11 @@
   letter-spacing: -0.04em;
 }
 
-.logoBall {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 38% 32%, #ffe9a8, var(--gold) 45%, #d98a1c);
-  box-shadow: inset 0 -2px 3px rgba(122, 74, 18, 0.35);
+.logoMark {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: -4px 0 -2px;
 }
 
 .seg {

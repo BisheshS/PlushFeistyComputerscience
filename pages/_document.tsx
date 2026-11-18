@@ -14,6 +14,9 @@ export default function Document() {
         <meta name="color-scheme" content="light dark" />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f6f2" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script dangerouslySetInnerHTML={{ __html: jsFlag }} />
       </Head>
       <body>
