@@ -11,13 +11,13 @@ export type LegalDoc = {
 
 export const flipPrivacy: LegalDoc = {
   title: "Privacy Policy",
-  lastUpdated: "Last updated: 9 October 2026",
+  lastUpdated: "Last updated: 24 November 2026",
   intro: "Flip is built so your urges never leave your phone. We don't run servers, we don't have accounts, and we don't collect your data. Here's exactly what that means.",
   sections: [
     {
       heading: "WHAT WE COLLECT",
       body: [
-        "Almost nothing. Flip has no sign-up, no analytics, no advertising and no tracking. The one exception is purchases. When you open Flip, the app contacts RevenueCat, a service that confirms subscriptions, to sync your purchase status. It sends a random, anonymous app user ID, your device identifier for vendors (IDFV) and your purchase history. It does not get your name, email or Apple ID. This data is not used for ads or tracking. We use it to see how many people subscribe. Nothing about your urges, habits or stats is sent.",
+        "Almost nothing. Flip has no sign-up, no advertising and no tracking. The one exception is RevenueCat, a service that confirms subscriptions. When you open Flip, the app contacts RevenueCat to sync your purchase status. It sends a random, anonymous app user ID, your device identifier for vendors (IDFV) and your purchase history. As you go through setup, the app also tells RevenueCat the furthest setup screen you reached, for example \"paywall\". It does not get your name, email or Apple ID. It does not get your answers, habits, urges or stats. This data is not used for ads or tracking. We use it to see how many people subscribe and where people stop in setup.",
       ],
     },
     {
